@@ -66,7 +66,7 @@ public class Main extends JavaPlugin{
 		Player p = (Player)sender;
 		String sent = label.toLowerCase();
 
-		if(sent.contains("element")){
+		if(sent.equalsIgnoreCase("element")){
 			chooseElement.clear();
 			chooseElement.setItem(2,createItem(new ItemStack(Material.BLAZE_POWDER),
 					""+ChatColor.GOLD+"Choose Fire!",
@@ -75,7 +75,7 @@ public class Main extends JavaPlugin{
 					""+ChatColor.AQUA+"Choose Ice!",
 					new String[]{ChatColor.DARK_AQUA+"Infinite Speed II",""+ChatColor.GRAY+ChatColor.ITALIC+"Note: You can change this with /element."}));
 			p.openInventory(chooseElement);
-		}else if(sent.contains("cc")){
+		}else if(sent.equalsIgnoreCase("cc")){
 			if(p.hasPermission("crimson.cc")) {
 				for(int i=0;i<250;i++) {
 					Bukkit.getServer().broadcastMessage("");
@@ -84,7 +84,7 @@ public class Main extends JavaPlugin{
 			}else {
 				p.sendMessage(ChatColor.RED+"You can't do that!");
 			}
-		}else if(sent.contains("shockwave")) {
+		}else if(sent.equalsIgnoreCase("shockwave")) {
 			if(p.hasPermission("crimson.admin")) {
 				if(args.length==2) {
 					int diam = Integer.valueOf(args[0]);
