@@ -1,0 +1,12 @@
+main: com.crimsonnetwork.Main
+name: CrimsonCore
+version: 1.0
+description: Core Plugin for Crimson Network
+
+commands:
+  element:
+    description: Pick your element!
+  cc:
+    description: Clear chat.
+  shockwave:
+    description: Console only.
